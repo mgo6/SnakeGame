@@ -1,0 +1,226 @@
+ 
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background: green; 
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scoreBox{
+    color: #34ff01;
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#hiscoreBox{
+    color: #00fffb;
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#board{
+    background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
+    width: 90vmin;
+    height: 92vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+.head{
+    background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
+    border: 2px solid rgb(34, 4, 34); 
+    transform: scale(1.02);
+    border-radius: 9px;
+}
+
+.snake{
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+
+.food{
+    background: linear-gradient(red, purple);
+    border: .25vmin solid black;
+    border-radius: 8px;
+}
+
+.keycontrol {
+    width: 95vw;
+    height: 30vh;
+    position: fixed;
+  }
+  
+  .btn {
+    position: fixed;
+    width: 29vw;
+    background-color: #052367;
+    color: #34ff01;
+    height: 10vh;
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    font-weight: 900;
+    font-size: 18px;
+  }
+  
+  #UP {
+    bottom: 26vh;
+    left: 36vw;
+  }
+  
+  #DOWN {
+    bottom: 1vh;
+    left: 36vw;
+  }
+  
+  #RIGHT {
+    bottom: 14vh;
+    right: 2vw;
+  }
+  
+  #LEFT {
+    bottom: 14vh;
+    left: 2vw;
+  }
+
+  #PAUSE {
+    bottom: 14vh;
+    left: 36vw;
+  }
+
+  #MODE{
+    color: rgb(255, 35, 35);
+    border: 2px solid hsl(0, 100%, 52%);
+    top: 1.6vh;
+    left: 36vw;
+    font-size: 1em ;
+    font-weight: 300;
+    width: 22vw;
+    height: 5vh;
+    cursor: pointer;
+    font-weight: 400;
+  }
+  span{
+    color: aqua;
+  }
+
+  #toasts {
+    background: rgb(236, 75, 75);
+    color: red;
+  }
+.toast {
+   border: 1px solid whitesmoke;
+   border-radius: 10px;
+   background: rgb(255, 0, 0);
+   color: rgb(255, 255, 255);
+   position: fixed;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 60vw;
+   padding: 20px;
+   text-align: center;
+   align-items: center;
+    padding: 1rem 2rem;
+   margin: 0.5rem;
+   box-shadow:  
+               3px 3px 7px rgb(255, 0, 0);
+               /* margin: auto; */
+ }
+
+  strong{
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font: 1.5em sans-serif;
+    font-weight: 500;
+    font-family: cursive;
+  
+  }
+
+  #x{
+    font-size: 7em;
+    font-weight: 200;
+    color: black;
+  }
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    #board{
+        position: fixed;
+        top: 10vh;
+        background: linear-gradient(rgb(118, 120, 118), rgb(211, 211, 209));
+        width: 98vw;
+        height: 50vh;
+        border: 2px solid black;
+        display: grid;
+        grid-template-rows: repeat(18, 1fr);
+        grid-template-columns: repeat(18, 1fr);
+    }
+      
+}
+
+#popup{
+    width: 90vw;
+    height: 20vh;
+    text-align: center;
+      border: 2px solid black;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 30px rgb(61, 82, 61);
+    background: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s; 
+}
+#popup.open{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+.swich{
+     margin: 40px 0 0 0;
+    background: #34ff01;
+    width: 29vw;
+    background-color: #052367;
+    color: #ffffff;
+    height: 7vh;
+    border: 3px solid #0cffdb;
+    box-shadow: 2px 3px 7px #0cffdb;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+#easy{
+    color: rgb(0, 255, 0);
+}
+#hard{
+    color: red;
+}
